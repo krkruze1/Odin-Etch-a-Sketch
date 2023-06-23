@@ -12,16 +12,16 @@ container.setAttribute('id','container')
 
 document.body.appendChild(container);
 
-for (i=0; i<rows; i++){
-    const row = document.createElement('div');
-    row.classList.add("row", `row.${i+1}`);
-    for (j=0; j<columns; j++){
+for (i=0; i<columns; i++){
+    const column = document.createElement('div');
+    column.classList.add("column", `col.${i+1}`);
+    for (j=0; j<rows; j++){
 
         const square = document.createElement('div');
         square.textContent= 's';
-        square.classList.add("square", `column${j+1}`, `row${j+1}`)
-        row.appendChild(square);
+        square.classList.add("square", `row${j+1}`, `col${i+1}`)
+        column.appendChild(square);
     }
-    container.appendChild(row);
+    container.appendChild(column);
 }
 
