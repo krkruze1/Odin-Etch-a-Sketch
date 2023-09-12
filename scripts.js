@@ -18,10 +18,25 @@ for (i=0; i<columns; i++){
     for (j=0; j<rows; j++){
 
         const square = document.createElement('div');
-        square.textContent= 's';
         square.classList.add("square", `row${j+1}`, `col${i+1}`)
         column.appendChild(square);
+        
     }
     container.appendChild(column);
 }
 
+document.querySelectorAll(".square").forEach(item=>{item.addEventListener("mouseover", () => item.style.backgroundColor='rgb(' + randomRGBNum() + ',' + randomRGBNum() + ',' + randomRGBNum() + ')')});
+
+function randomRGBNum() {
+    let num = Math.floor(Math.random()*256);
+    return num;
+}
+
+// function randomColor() {
+//     const bgColor = [(randomRGBNum()),(randomRGBNum()),(randomRGBNum())];
+//     return bgColor;
+// }
+
+// function changeBGColor() {
+//     item.style.backgroundColor='rgb(' + randomRGBNum() + ',' + randomRGBNum() + ',' + randomRGBNum() + ')';
+// }
