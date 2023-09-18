@@ -7,8 +7,8 @@
 .square {
     background-color: bisque;
     margin: 0px;
-    border-style: solid;
-    border-color:aquamarine;
+    /* border-style: solid;
+    border-color:aquamarine; */
     width: auto;
     height: 0;
     padding: 50%; 
@@ -17,16 +17,22 @@
     align-items: center;
 }
 
-/* .square:hover {
-    background-color: yellowgreen;
-} */
-
-#container {
+#container2 {
     width: 80vh;
     margin: auto;
-    margin-top: 5vh;
+    margin-top: 8px;
     border-style: solid;
     border-color: red;
     padding: 3px;
     display: flex;
+}
+
+#container1 {
+    display:flex;
+    justify-content: center;
+}
+
+#container0 {
+    display:flex;
+    justify-content: center;
 }
